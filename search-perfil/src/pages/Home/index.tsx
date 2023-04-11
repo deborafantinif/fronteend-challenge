@@ -1,6 +1,14 @@
 function Home() {
   return (
-    <h1>Home</h1>
+    <main>
+      <h1>Search Devs</h1>
+      <div>
+        <input type="text"/>
+        <button>
+          Buscar
+        </button>
+      </div>
+    </main>
   );
 }
 
