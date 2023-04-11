@@ -8,7 +8,7 @@ function AppRoutes() {
     <Routes>
       <Route path="/" element={<pages.Home/>} />
       <Route path="/home" element={<pages.Home/>} />
-      <Route path="/perfil" element={<pages.Perfil />} />
+      <Route path="/perfil/:username" element={<pages.Perfil />} />
       <Route path="*" element={<pages.NotFound />} />
     </Routes>
   );
