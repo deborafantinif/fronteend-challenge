@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { getPerfilUser } from "../../utils/getPerfilUser";
 import { useNavigate } from "react-router-dom";
+
 function Home() {
   const[username, setUsername] = useState('')
   const navigate = useNavigate();
