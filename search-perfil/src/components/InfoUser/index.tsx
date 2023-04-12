@@ -21,7 +21,6 @@ interface InfoUserProps {
 
 function InfoUser({perfil}: InfoUserProps) {
   const navigate = useNavigate()
-
   return (
     <S.InfoUser>
       <img src={perfil.avatar_url} alt="avatar user" />
@@ -59,7 +58,7 @@ function InfoUser({perfil}: InfoUserProps) {
         }
         {
           perfil.bio &&
-          <a href={perfil.blog} target="_blank">
+          <a href={`https://${perfil.blog}`} target="_blank">
             <Link size={20} /> {perfil.blog}
           </a>
         }

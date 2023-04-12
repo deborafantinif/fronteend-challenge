@@ -65,6 +65,15 @@ export const InfoUser = styled.div`
   button:focus {
     box-shadow: #626774 0 0 0 1px inset, #757A85 0 6px 15px 0, #898D97 0 2px 2px 0, #B0B3B9 0 0 0 4px;
   }
+
+  @media (max-width: 1100px) {
+    width: 28%;
+  }
+
+  @media (max-width: 500px) {
+    position: relative;
+    width: 100%;
+  }
 `
 
 export const Bio = styled.p`
