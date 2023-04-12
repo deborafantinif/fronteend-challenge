@@ -3,6 +3,7 @@ import { useLocation, useParams } from 'react-router-dom';
 import InfoUser from '../../components/InfoUser';
 import Repository from '../../components/Repository';
 import { getReposUser } from '../../utils/getReposUser';
+import * as S from "./styles";
 
 interface Repository {
   id: string
@@ -32,14 +33,16 @@ function Perfil() {
   }, [])
 
   return (
-    <>
+    <S.Perfil>
       <InfoUser perfil={perfil}/>
+      <S.Repositories>
       {
         repositories.length >= 0 ? repositories.map(repo => <Repository key={repo.id} info={repo}/>) : <div>
           Not public repositories exist.
         </div>
       }
-    </>
+      </S.Repositories>
+    </S.Perfil>
   );
 }
 

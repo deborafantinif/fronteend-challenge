@@ -1,4 +1,6 @@
+import { Buildings, Envelope, HeartStraight, Link, MapPin, TwitterLogo, UsersThree } from "phosphor-react";
 import { useNavigate } from "react-router-dom";
+import * as S from "./styles";
 
 interface InfoUserProps {
   perfil: {
@@ -12,6 +14,7 @@ interface InfoUserProps {
     location: string,
     email: string,
     blog: string,
+    html_url: string,
     twitter_username: string
   }
 }
@@ -20,21 +23,58 @@ function InfoUser({perfil}: InfoUserProps) {
   const navigate = useNavigate()
 
   return (
-    <div>
-    <img src={perfil.avatar_url} alt="avatar user" />
-    <h2>{perfil.name}</h2>
-    <h3>{perfil.login}</h3>
-    <p>{perfil.bio}</p>
-    <p>{perfil.followers} - {perfil.following}</p>
-    <p>{perfil.company}</p>
-    <p>{perfil.location}</p>
-    <p>{perfil.email}</p>
-    <a href={perfil.blog} target="_blank">site</a>
-    <a href={`https://twitter.com/${perfil.twitter_username}`} target="_blank">{perfil.twitter_username}</a>
-    <button onClick={() => navigate('/')}>
-      VOLTAR
-    </button>
-  </div>
+    <S.InfoUser>
+      <img src={perfil.avatar_url} alt="avatar user" />
+      <h2>{perfil.name}</h2>
+      <a href={perfil.html_url} target="_blank">
+        <h3>@{perfil.login}</h3>
+      </a>
+      <S.Bio>{perfil.bio}</S.Bio>
+      <S.Numbers>
+        <span>
+          <UsersThree size={15} /> {perfil.followers} followers
+        </span>
+        <span>
+          <HeartStraight size={15} /> {perfil.following} following
+        </span>
+      </S.Numbers>
+      <S.Links>
+        {
+          perfil.company &&
+          <p>
+            <Buildings size={22} /> {perfil.company}
+          </p>
+        }
+        {
+          perfil.location &&
+          <p>
+            <MapPin size={20} /> {perfil.location}
+          </p>
+        }
+        {
+          perfil.email &&
+          <p>
+            <Envelope size={20} /> {perfil.email}
+          </p>
+        }
+        {
+          perfil.bio &&
+          <a href={perfil.blog} target="_blank">
+            <Link size={20} /> {perfil.blog}
+          </a>
+        }
+        {
+          perfil.twitter_username &&
+          <a
+            href={`https://twitter.com/${perfil.twitter_username}`}
+            target="_blank"
+          >
+            <TwitterLogo size={20} /> @{perfil.twitter_username}
+          </a>
+        }
+      </S.Links>
+      <button onClick={() => navigate("/")}>VOLTAR</button>
+    </S.InfoUser>
   );
 }
 

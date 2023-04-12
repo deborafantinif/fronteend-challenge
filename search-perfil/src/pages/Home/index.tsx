@@ -3,7 +3,6 @@ import { getPerfilUser } from "../../utils/getPerfilUser";
 import { useNavigate } from "react-router-dom";
 import * as S from "./styles";
 import { MagnifyingGlass, XCircle } from "phosphor-react";
-import Alert from "../../components/Alert";
 
 function Home() {
   const[username, setUsername] = useState('')

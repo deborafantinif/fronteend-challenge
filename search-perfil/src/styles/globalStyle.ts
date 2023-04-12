@@ -11,7 +11,7 @@ export const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth;
   }
 
-  body, input, button {
+  body, input, button, a {
     font-family: "Exo 2", sans-serif;
   }
 
