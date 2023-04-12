@@ -46,7 +46,7 @@ export const Search = styled.div`
   button {
     margin-left: 10px;
     backface-visibility: hidden;
-    background-color: #3B4252;
+    background-color: #7353BA;
     border-radius: 6px;
     border-width: 0;
     box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
@@ -74,11 +74,11 @@ export const Search = styled.div`
   }
 
   button:hover {
-    background-color: #1D2129;
+    background-color: #452F75;
   }
 
   button:focus {
-    box-shadow: #626774 0 0 0 1px inset, #757A85 0 6px 15px 0, #898D97 0 2px 2px 0, #B0B3B9 0 0 0 4px;
+    box-shadow: #563A92 0 0 0 1px inset, #6746AF 0 6px 15px 0, #7D5FBF 0 2px 2px 0, #A18AD0 0 0 0 4px;
   }
 `
 
