@@ -1,89 +1,58 @@
+<h1 align="center">
+  Search Perfil
+</h1>
 
-## Objetivo do desafio
+<h3 align="center">
+  🏘️ Makasí - Teste Técnico
+</h3>
 
-Construir uma aplicação web em ReactJS que atinja o seguinte objetivo: buscar o perfil de desenvolvedores na API pública do GitHub e exibir os seus dados em uma página de perfil.
+<p align="center">
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-execução">Execução</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+</p>
 
-## Como começar o desafio
+<br>
 
-Dar um fork no projeto, clonar o repositório em sua máquina local e criar um branch novo para o seu código.
+<p align="center">
+  <img alt="SearchPerfil" src="./search-perfil.png" width="100%">
+</p>
 
-## Histórias
+## 👩‍💻 Tecnologias
 
-• Ao entrar na home page, devo pesquisar o usuário pelo seu username do GitHub e ter os dados do usuário exibidos corretamente na página de perfil.  
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-• Na página de perfil, os repositórios devem ser ordenados com o seguinte critério: dos que tem mais estrelas, para os que tem menos estrelas.  
+- [Node.js](https://nodejs.org/en/)
+- [Vite](https://vitejs.dev/)
+- [React](https://reactjs.org)
+- [TypeScript](https://reactjs.org)
+- [Axios](https://axios-http.com/docs/intro)
+- [Styled Components](https://styled-components.com/)
+- [Vercel](https://vercel.com)
 
-• Os nomes dos repositórios devem ser links que levam ao repositório original do GitHub, em uma página nova.  
+Durante a execução do projeto, optei pelas ferramentas acima pela agilidade na produção e legibilidade do código. A escolha de usar Vite no projeto permitiu um setup mais rápido e eficiente, sendo um dos motivos, o fato de ter utilizado Typescript e o Vite já vir com as configurações necessárias. Optei pelo Typescript por tornar o código mais seguro e estrutura-lo melhor. Utilizei o styled-components por deixar mais limpa a parte da estilização. E por fim, usei o Vercel para o deploy por ele ser o mais prático para uma aplicação simples como essa.
 
-• Caso o usuário pesquisado possua um site nas informações de seu perfil, o mesmo deve ser aberto em uma nova página. O mesmo deve acontecer caso o usuário pesquisado tenha uma conta no twitter em seu perfil.  
+## 💻 Projeto
 
-• O botão de voltar deve levar de volta para a home page, para que outro usuário do GitHub seja pesquisado.  
+O objetivo deste projeto é permitir que os usuários busquem perfis do GitHub e visualizem suas informações em um formato amigável. A aplicação utiliza a [API do GitHub](https://docs.github.com/en/rest?apiVersion=2022-11-28) para realizar a busca e exibe informações como o nome do usuário, a imagem de perfil, os repositórios públicos com maior número de estrelas, entre outros dados.
 
-## Referências
 
-• API de busca de usuários do GitHub: <https://api.github.com/users/username>
+## 🤔 Execução
 
-• API de busca de repositórios do usuário pesquisado: <https://api.github.com/users/username/repos>
+Você pode utilizar a aplicação por este [link](https://search-perfil.vercel.app/).
 
-• Documentação oficial do GitHub: <https://docs.github.com/en/rest>
+**Para inicialização do projeto dentro da máquina, siga os próximos passos**
 
-• Design de tela que deve ser utilizado para a tela Home: <https://github.com/makasi-tech/fronteend-challenge/blob/main/tela_home.PNG>
+- Tenha previamente instalado na sua máquina o Node.js e npm (ou yarn) e um editor de código (VS Code)
 
-• Design de tela que deve ser utilizado para a tela Perfil: <https://github.com/makasi-tech/fronteend-challenge/blob/main/tela_perfil.PNG>
+- Clone o repositório:
 
-## Observações
+  `git clone git@github.com:deborafantinif/fronteend-challenge.git`
 
-1. Não é necessário se preocupar com CORS ou implementar um backend para fazer as requisições. A API do Github permite chamadas diretas do navegador.
+- Entre na pasta search-perfil e instale as dependências:
 
-2. Caso queira visualizar o payload com a resposta das requisições, recomendamos utilizar o Insomnia para a tarefa. (ou postman, ou postwoman, ou curl, o que preferir).
+  `npm install`
 
-## Requisitos Técnicos para a entrega do teste
+- Acesse a aplicação com o script dev:
 
-• O teste deve ser feito utilizando a library de ReactJS com function components
-
-• Pode utilizar qualquer boilerplate de sua prefência (CRA, CSA, EruptionJS, ou montar o boilerplate na mão)
-
-• Pode utilizar qualquer library de CSS e CSS-in-JS. (recomendamos Mantine UI, Material UI, Bootstrap ou Styled Components. Pode fazer com CSS clássico também)
-
-• Deve-se utilizar rotas com a library react-router-dom, e recomendamos o uso da funcionalidade de history do react-router-dom também
-
-• O teste deve conter duas rotas: a rota “home” da página de busca, e a rota “perfil” que exibe o perfil do usuário pesquisado
-
-• O responsivo – caso queira faze-lo – deve ser levado em 3 considerações: Notebook/Desktop (como um só, resoluções maiores que 1300px width), tablet iPad e celular iPhone 5 (o Chrome Dev Tools possui referência para todos estes dispositivos por padrão)
-
-• Caso queira faze-lo, o projeto pode ter uma documentação em readme ensinando a:
-
-1. instalar o projeto na máquina (engines, versão de node, qual gerenciador de pacote usar)
-2. instalar as dependências do projeto
-3. rodar o ambiente de desenvolvimento
-4. rodar a build de deploy da aplicação.
-
-• Ainda na documentação, explicar a sua motivação de escolha das libs e frameworks (ou o motivo de ter feito na mão). Uma explicação sobre a estrutura do projeto também será bem vinda.
-
-• Pode utilizar tanto o Axios quanto ou Fetch para requisições.
-
-• Deve ser seguido o layout disponibilizado. Caso queira, pode utilizar uma lib de ícones com ícones semelhantes e relevantes pro contexto da aplicação.
-
-• É imprescindível que o teste desenvolvido funcione corretamente na minha máquina (em qualquer máquina, na real). Inclusive, recomendo que comece codando pela regra de negócio e, depois de finalizado a regra, trabalhe corretamente os components, qualidade de código e layout.
-
-• Testes é um "nice to have".
-
-## Observações importantes
-
-A ideia deste desafio é entender como você domina os conceitos básicos de React, com um desafio no mundo real, da forma mais “sincera” possível. E, a partir dele, entender como você traz este conhecimento pra debate com outros profissionais e como você o apresenta como solução técnica que traz valor para um cliente/usuário final num ambiente de trabalho.
-
-Não é pra ser um teste exaustivo - este não é esse o objetivo. Tanto que no teste eu não peço soluções de formulário com CRUD completo e gerenciamento de estados complexos. A regra principal *- e o que mais importa -* é que o teste que você desenvolveu e apresentou, funcione e atenda ao que foi solicitado na história acima.
-
-Além do que foi pedido nos requisitos técnicos acima, não existe “certo e errado”, da mesma forma que não vamos levar tudo ao pé da letra nos mínimos detalhes.
-
-## Considerações finais
-
-O que sempre se espera de um profissional front-end, é que ele entenda uma tarefa, a regra de negócio solicitada, seus requisitos técnicos e a apresentação de tela que é esperado para a tarefa. Este são os requisitos mínimos para um profissionai de nível Júnior. Os demais pontos, você deve ser mentorado dentro da empresa e crescer junto dos demais profissionais. *(no cenário ideal de trabalho)*. Acredito que este teste atenda bem estes requisitos.
-
-Esperamos que você vá além do mínimo proposto e demostre o conhecimento que tem. O teste tem gaps propositais para você sugerir soluções, desenvolver ideias e provar na prática o porque a sua decisão pode ter um impacto positivo nessa tarefa.
-
-No demais, o diálogo é sempre bem-vindo e incentivado, principalmente sugestões e discussões.  Caso surjam dúvidas no processo, sintam-se à vontade para nos perguntar.
-
-Boa sorte no teste!
-
-Abraços! o/
+  `npm run dev`
